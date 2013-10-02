@@ -8,19 +8,11 @@
 </head>
 <body>
 
-<!--   enctype="multipart/form-data" -->
-<form name = "upload_form" action="/board" method="post">
-	<table>
-		<tr>
-			<td><input name="photo" type="file"></td>
-		</tr>
-		<tr>
-			<td><textarea name="article", rows="3", cols="30">지금 무슨 생각을 하고 계시나요?</textarea></td>
-		</tr>
-		<tr>
-			<td><input type="submit" value="게시"></td>
-		</tr>
-	</table>
+<form name = "uploadForm" action="/board" method="post" enctype="multipart/form-data">
+	제목: <input name="title" type="text" size="50" /><br />
+	파일: <input name="file" type="file" size="50" /><br />
+	<textarea name="article" rows="5" cols="50">지금 무슨 생각을 하고 계시나요?</textarea><br />
+	<input type="submit" value="게시" />
 </form>
 
 </body>
