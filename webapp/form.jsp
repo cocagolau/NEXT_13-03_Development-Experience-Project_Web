@@ -1,19 +1,34 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+	<meta charset="utf-8">
+	<title>Insert title here</title>
+	<link rel="stylesheet" type="text/css" href="../../stylesheets/form.css">
 </head>
 <body>
 
-<form name = "uploadForm" action="/board" method="post" enctype="multipart/form-data">
-	제목: <input name="title" type="text" size="50" /><br />
-	파일: <input name="file" type="file" size="50" /><br />
-	<textarea name="article" rows="5" cols="50">지금 무슨 생각을 하고 계시나요?</textarea><br />
-	<input type="submit" value="게시" />
-</form>
+	<form name = "uploadForm" action="/board" method="post" enctype="multipart/form-data">
+		<div id="articleForm">
+			<div id="articleTop">
+				<div id="articleId">
+					<input name="id" type="hidden" value="${photoBoard.id}" />
+				</div>	
+			</div>
+			<div id="articleText">
+				<textarea name="article" rows="5" cols="64" placeholder="지금 무슨 생각을 하고 계시나요?" autofocus>${photoBoard.article}</textarea>
+			</div>
+			<div id="articleBottom">
+				<div id="articlePhoto">
+					<input name="photo" type="file" size="50" />
+				</div>
+				<div id="submitArticleForm">
+					<input type="submit" value="글쓰기" />
+				</div>
+			</div>
+		</div>
+	</form>
 
 </body>
 </html>

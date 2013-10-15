@@ -1,5 +1,9 @@
 package org.nhnnext.web;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 import org.nhnnext.repository.BoardRepository;
 import org.nhnnext.support.FileUploader;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,18 +20,51 @@ public class BoardController {
 	
 	@Autowired
 	BoardRepository boardRepository;
+	
 	@RequestMapping("/form")
 	public String form() {
 		return "form";
 	}
 	
+	@RequestMapping("/form/{id}")
+	public String modify(@PathVariable Long id, Model model) {
+		model.addAttribute(boardRepository.findOne(id));
+		return "form";
+	}
+	
+	@RequestMapping("delete/{id}")
+	public String delete(@PathVariable Long id) {
+		boardRepository.delete(id);
+		return "redirect:/board";
+	}
+	@RequestMapping("")
+	public String list(Model model) {
+		List<PhotoBoard> photoBoards = new ArrayList<PhotoBoard>();
+		Iterator<PhotoBoard> photoBoardsIterator = boardRepository.findAll().iterator();
+		
+		while (photoBoardsIterator.hasNext()) {
+			photoBoards.add(photoBoardsIterator.next());
+		}
+		
+		model.addAttribute("photoBoards", photoBoards);
+		return "boardList";
+	}
+	
 	@RequestMapping(value="", method=RequestMethod.POST)
-	public String upload(PhotoBoard photoBoard, MultipartFile file) {
+	public String upload(PhotoBoard photoBoard, MultipartFile photo) {
 		
-		photoBoard.setFilename(FileUploader.upload(file));
-		PhotoBoard currentPhotoBoard = boardRepository.save(photoBoard);
+		Long currentId = photoBoard.getId();
+		String currentFilename = FileUploader.upload(photo);
 		
-		return "redirect:/board/"+ currentPhotoBoard.getId();
+		if (currentId != null && currentFilename == null) {
+			String newFilename = boardRepository.findOne(currentId).getFilename();
+			currentFilename = newFilename;
+		}
+		
+		photoBoard.setFilename(currentFilename);
+		boardRepository.save(photoBoard);
+		
+		return "redirect:/board";
 	}
 	
 	@RequestMapping("/{id}")

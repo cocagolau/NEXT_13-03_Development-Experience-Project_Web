@@ -1,0 +1,21 @@
+@CHARSET "utf-8";
+
+.articleTable {clear:both; width:460px;}
+ 
+.leftArticle {float:left; width:55px; padding-right:5px;}
+#profilePhoto {width:55px;}
+
+.rightArticle {float:right; width:400px;}
+.rightArticle>div {width:400px;}
+
+.topMenu {background-color:#EDEDED}
+.name {float:left;}
+.option {float:right;}
+
+.option>ul {padding:0px; margin:0px; list-style:none;}
+.optionItem {float:left; white-space:nowrap; margin-right:5px;}
+
+.contents {clear:both;}
+.bottomMenu {clear:both; background-color:#EDEDED}
+
+.comments {clear:both; margin-bottom:20px; border-top:2px dotted #EDEDED; border-bottom:2px solid #EDEDED; padding:5px 0px;}
