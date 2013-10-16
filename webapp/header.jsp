@@ -6,12 +6,7 @@
 		<div id="status" class="alignBottom">
 			<div class="alignParent">
 				<div id="statusDate" class="alignBottom">2013.10.10 <span>(목)</span></div>
-				<div id="statusInfo" class="alignBottom">
-					<span>
-						<a href="board/form" target="_blank">글쓰기</a>
-					</span>
-				</div>
-				<div id="statusUser" class="alignBottom">user</div>
+				<%@ include file = "userStatus.jsp" %>
 			</div>
 		</div>
 	</div>

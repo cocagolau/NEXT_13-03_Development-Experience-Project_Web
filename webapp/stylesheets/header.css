@@ -4,10 +4,10 @@
 #statusBar {color:#EFFEFE; width:980px; min-width:980px; margin:0px auto; padding-top:2px; border:0px solid #3F6CAF;}
 	/* statusInfo: logo, journalLogo, paperInfo */
 	#statusBar>div {height:48px; margin-top:-53px;}
-	#logo {left:0px; font-size:2.5em; font-style:bold;}
+	#logo {left:0px; font-size:2.5em; font-style:bold; border:1px solid #3F6CAF;}
 	#status {left:230px; height:40px; width:750px;}
 		#status>div {height:100%; width:100%; margin-top:-40px;}
 		#statusDate {left:0px; font-size:1.8em; font-style:thin;}
 		#statusDate>span {font-size:0.9em}
-		#statusInfo {left:200px;  font-size:1.5em; font-style:thin;}
-		#statusUser {right:0px; font-size:2em;}
+		#statusInfo {left:200px;  font-size:1.5em; font-style:thin; border:1px solid #3F6CAF;}
+		#statusUser {right:0px; font-size:2em; border:1px solid #3F6CAF;}

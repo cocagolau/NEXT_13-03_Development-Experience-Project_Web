@@ -1,9 +1,5 @@
 package org.nhnnext.web;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-
 import org.nhnnext.repository.BoardRepository;
 import org.nhnnext.support.FileUploader;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +12,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 @Controller
 @RequestMapping("/board")
-public class BoardController {
+public class PhotoBoardController {
 	
 	@Autowired
 	BoardRepository boardRepository;
@@ -39,14 +35,7 @@ public class BoardController {
 	}
 	@RequestMapping("")
 	public String list(Model model) {
-		List<PhotoBoard> photoBoards = new ArrayList<PhotoBoard>();
-		Iterator<PhotoBoard> photoBoardsIterator = boardRepository.findAll().iterator();
-		
-		while (photoBoardsIterator.hasNext()) {
-			photoBoards.add(photoBoardsIterator.next());
-		}
-		
-		model.addAttribute("photoBoards", photoBoards);
+		model.addAttribute("photoBoards", boardRepository.findAll());
 		return "boardList";
 	}
 	

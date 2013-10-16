@@ -1,0 +1,6 @@
+@CHARSET "UTF-8";
+
+#commentContents>input {width:350px;}
+#commentSubmit>input {width:40px;}
+
+.commentWriterProfile {float:left; width:50px;}

@@ -16,6 +16,7 @@
 .optionItem {float:left; white-space:nowrap; margin-right:5px;}
 
 .contents {clear:both;}
+.photo>img {max-width:400px;}
 .bottomMenu {clear:both; background-color:#EDEDED}
 
 .comments {clear:both; margin-bottom:20px; border-top:2px dotted #EDEDED; border-bottom:2px solid #EDEDED; padding:5px 0px;}

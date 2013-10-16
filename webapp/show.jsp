@@ -25,7 +25,9 @@
 			<div class="bottomMenu">
 				comment 10, quoted 7
 			</div>
-			<div class="comments">댓글영역</div>
+			<div class="comments">
+				<%@ include file="comments.jsp" %>
+			</div>
 		</div>
 	</div>
 </div>
