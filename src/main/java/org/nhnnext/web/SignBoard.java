@@ -1,8 +1,14 @@
 package org.nhnnext.web;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+import org.codehaus.jackson.annotate.JsonIgnore;
+import org.junit.Ignore;
 
 @Entity
 public class SignBoard {
@@ -15,6 +21,13 @@ public class SignBoard {
 	
 	@Column(length=8, nullable=false)
 	private String name;
+	
+	@OneToMany(mappedBy="signBoard")
+	private List<PhotoBoard> photoBoards;
+	
+	@OneToMany(mappedBy="signBoard")
+	private List<CommentsBoard> commentsBoards;
+	
 	
 	public String getEmail() {
 		return email;
@@ -35,6 +48,14 @@ public class SignBoard {
 	}
 	public void setName(String name) {
 		this.name = name;
+	}
+	
+	public List<PhotoBoard> getPhotoBoards() {
+		return photoBoards;
+	}
+	
+	public List<CommentsBoard> getCommentsBoards() {
+		return commentsBoards;
 	}
 	
 	

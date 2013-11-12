@@ -1,1 +1,48 @@
 @CHARSET "UTF-8";
+
+#signUp {
+	position:absolute; top:40px; left:50%;
+	width:500px; height:400px;
+	margin-left:-250px; padding:30px;
+	border-radius:15px;
+	background-color:rgba(255,255,255,0.9);
+}
+#signUp a {
+	text-decoration:none;
+	color:#A7A7A7;
+}
+
+#signUp > h1 {
+	font-size:3em; color:#3f6caf;
+	text-align:center;
+	margin-bottom:20px;
+}
+#signUp > div:nth-of-type(1) {
+	position:absolute;
+	right:20px; top:20px;
+	font-size:2em;
+	color:#A7A7A7;
+}
+#signUp > .form {
+	position:absolute;
+	width:350px; height:300px;
+	left:50%; margin-left:-175px;
+}
+
+#signUp > .form input {
+	font-size:1.8em;
+	padding:8px 13px;
+	width:320px;
+	margin-bottom:10px;
+}
+
+#signUp > .form .facebook {
+	position:absolute;
+	width:330px; height:50px;
+	margin-left:10px; margin-top:10px;
+	text-align:center;
+	padding-top:24px;
+	border-radius:10px;
+	background-color:#2A4588;
+	font-size:2.2em;
+}

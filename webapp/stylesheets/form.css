@@ -1,8 +1,9 @@
 @CHARSET "UTF-8";
+#wrap {margin:0px auto;}
 
 #articleForm {width:470px; border:0px solid #3f6caf;}
 #articleText {width:100%;}
 #articlePhoto {position:relative; float:left; width:416px; border:0px solid #3f6caf;}
 #submitArticleForm {position:relative; float:right; width:50px; border:0px solid #3f6caf;}
 
-#photoSrc {width:100%; font-size:5px}
+#photoSrc {width:100%; font-size:5px;}

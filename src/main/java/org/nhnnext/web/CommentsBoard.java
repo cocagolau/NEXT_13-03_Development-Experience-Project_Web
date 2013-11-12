@@ -7,6 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
+
 @Entity
 public class CommentsBoard {
 
@@ -17,8 +19,13 @@ public class CommentsBoard {
 	@Column (length=1000, nullable=false)
 	private String contents;
 	
+	@JsonIgnore
 	@ManyToOne
 	private PhotoBoard photoBoard;
+	
+	@JsonIgnore
+	@ManyToOne
+	private SignBoard signBoard;
 	
 	public CommentsBoard() {}
 	public CommentsBoard(PhotoBoard photoBoard, String contents) {
@@ -43,11 +50,16 @@ public class CommentsBoard {
 	public void setPhotoBoard(PhotoBoard photoBoard) {
 		this.photoBoard = photoBoard;
 	}
-	
 	public PhotoBoard getPhotoBoard() {
 		return photoBoard;
 	}
 	
+	public void setSignBoard(SignBoard signBoard) {
+		this.signBoard = signBoard;
+	}
+	public SignBoard getSignBoard() {
+		return signBoard;
+	}
 	
 	
 }

@@ -5,15 +5,18 @@ body {font-size:12px; font-family:'돋움',dotum,Helvetica,sans-serif; margin:0p
 header {position:fixed; background-color:#77C9FF; width:100%; height:53px; visibility:visible; border-top:1px solid #3f6caf; border-bottom:1px solid #EDEDED;}
 /*#93daff, rgba(128,209,255,0.9)*/
 /* align */
-.alignParent {position:relative; border:0px solid #3f6caf;}
+.alignParent {position:relative; }
 .alignBottom {position:absolute; bottom:-100%; margin:0px;}
+
+/* test */
+.test { border:1px solid #3f6caf; }
 
 
 /* container */
 #container {width:980px; min-width:980px; margin:0px auto; padding-top:60px; border:0px solid #3f6caf;}
 
 /* controller */
-#controller {position:fixed; bottom:40px; width:980px; color:#77C9FF; font-size:1.5em; font-style:bold; border:0px solid #3f6caf;}
+#controller {position:fixed; z-index:-1; bottom:40px; width:980px; color:#77C9FF; font-size:1.5em; font-style:bold; border:0px solid #3f6caf;}
 #moveLeft {position:relative; float:left;}
 #moveRight {position:relative; float:right;}
 
@@ -22,3 +25,13 @@ header {position:fixed; background-color:#77C9FF; width:100%; height:53px; visib
 .journalTable {display:table; margin:0px 10px; min-width:960; min-height:620px;}
 .journalRow {display:table-row;}
 .journalColumn {display:table-cell; min-width:460px; padding-left:4px; padding-right:4px; width:478px; border-left:1px dotted #EDEDED; border-right:1px solid #EDEDED}
+
+
+#container .overlay {
+	position:fixed;
+	left:0px; top:54px;
+	width:100%;	height:100%;
+	background-color:rgba(0,0,0,0.8);
+	z-index:200;
+	
+}

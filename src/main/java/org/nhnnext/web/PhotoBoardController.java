@@ -1,6 +1,9 @@
 package org.nhnnext.web;
 
+import java.util.Iterator;
+
 import org.nhnnext.repository.BoardRepository;
+import org.nhnnext.repository.SignBoardRepository;
 import org.nhnnext.support.FileUploader;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,49 +19,100 @@ public class PhotoBoardController {
 	
 	@Autowired
 	BoardRepository boardRepository;
+	@Autowired
+	SignBoardRepository signBoardRepository;
 	
 	@RequestMapping("/form")
 	public String form() {
-		return "form";
-	}
-	
-	@RequestMapping("/form/{id}")
-	public String modify(@PathVariable Long id, Model model) {
-		model.addAttribute(boardRepository.findOne(id));
-		return "form";
+		return "createForm";
 	}
 	
 	@RequestMapping("delete/{id}")
 	public String delete(@PathVariable Long id) {
 		boardRepository.delete(id);
-		return "redirect:/board";
-	}
-	@RequestMapping("")
-	public String list(Model model) {
-		model.addAttribute("photoBoards", boardRepository.findAll());
-		return "boardList";
+		return "redirect:/";
 	}
 	
-	@RequestMapping(value="", method=RequestMethod.POST)
-	public String upload(PhotoBoard photoBoard, MultipartFile photo) {
-		
-		Long currentId = photoBoard.getId();
+	@RequestMapping("/modify/{id}")
+	public String modifyForm(@PathVariable Long id, Model model) {
+		model.addAttribute(boardRepository.findOne(id));
+		return "modifyForm";
+	}
+	
+	@RequestMapping(value="/modify", method=RequestMethod.POST)
+	public String modify(PhotoBoard photoBoard, String sign, MultipartFile photo) {
+		photoBoard = addSignBoard(photoBoard, sign);	
 		String currentFilename = FileUploader.upload(photo);
-		
-		if (currentId != null && currentFilename == null) {
-			String newFilename = boardRepository.findOne(currentId).getFilename();
-			currentFilename = newFilename;
-		}
+		if (currentFilename == null) {
+			currentFilename = boardRepository.findOne(photoBoard.getId()).getFilename();
+		}		
 		
 		photoBoard.setFilename(currentFilename);
 		boardRepository.save(photoBoard);
-		
-		return "redirect:/board";
+		return "redirect:/";
 	}
 	
-	@RequestMapping("/{id}")
-	public String show (@PathVariable Long id, Model model) {
-		model.addAttribute(boardRepository.findOne(id));
-		return "show";
+	@RequestMapping(value="", method=RequestMethod.POST)
+	public String create(PhotoBoard photoBoard,String sign, MultipartFile photo) {		
+		photoBoard = addSignBoard(photoBoard, sign);
+		photoBoard.setFilename(FileUploader.upload(photo));
+		boardRepository.save(photoBoard);
+		
+		return "redirect:/";
 	}
+	
+	@SuppressWarnings("unused")
+	private PhotoBoard addSignBoard (PhotoBoard photoBoard, String sign) {
+		SignBoard tempSignBoard = null;
+		Iterator<SignBoard> signIr = signBoardRepository.findAll().iterator();
+		while (signIr.hasNext()) {
+			tempSignBoard = signIr.next();
+			if (tempSignBoard.getEmail().equals(sign)) {
+				photoBoard.setSignBoard(tempSignBoard);
+				break;
+			}
+		}
+		return photoBoard;
+	}
+	
+//	@RequestMapping(value="", method=RequestMethod.POST)
+//	public String upload(PhotoBoard photoBoard, MultipartFile photo) {		
+//		Long currentId = photoBoard.getId();
+//		String currentFilename = FileUploader.upload(photo);
+//		
+//		if (currentId != null && currentFilename == null) {
+//			String newFilename = boardRepository.findOne(currentId).getFilename();
+//			currentFilename = newFilename;
+//		}
+//		
+//		String sign = photoBoard.getSign();
+//		Iterator<SignBoard> signIr = signBoardRepository.findAll().iterator();
+//		SignBoard tempSignBoard;
+//		while (signIr.hasNext()) {
+//			tempSignBoard = signIr.next();
+//			if (tempSignBoard.getEmail().equals(sign)) {
+//				photoBoard.setSignBoard(tempSignBoard);
+//				break;
+//			}
+//		}
+//		
+//		
+//		photoBoard.setFilename(currentFilename);
+//		boardRepository.save(photoBoard);
+//		
+//		return "redirect:/board";
+//	}
+//	
+//	@RequestMapping("/{id}")
+//	public String show (@PathVariable Long id, Model model) {
+//		PhotoBoard photoBoard = boardRepository.findOne(id);
+//		model.addAttribute(photoBoard);
+//		return "show";
+//	}
+//	
+//	@RequestMapping("")
+//	public String list(Model model) {
+//		model.addAttribute("photoBoards", boardRepository.findAll());
+//		return "boardList";
+//	}
 }

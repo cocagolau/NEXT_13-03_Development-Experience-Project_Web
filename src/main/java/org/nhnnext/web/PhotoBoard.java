@@ -23,11 +23,13 @@ public class PhotoBoard {
 	
 	@Column(length=1023, nullable=false)
 	private String article;
-	
-	
 
 	@OneToMany (mappedBy="photoBoard", fetch=FetchType.EAGER)
 	private List<CommentsBoard> comments;
+	
+	@ManyToOne
+	private SignBoard signBoard;
+	
 	
 	public Long getId() {
 		return id;
@@ -53,5 +55,20 @@ public class PhotoBoard {
 	
 	public List<CommentsBoard> getComments() {
 		return this.comments;
+	}
+	
+	public SignBoard getSignBoard() {
+		return signBoard;
+	}
+	public void setSignBoard(SignBoard signBoard) {
+		this.signBoard = signBoard;
+	}
+	
+	public int getSize() {
+		if (comments == null) {
+			return 0;
+		}
+		
+		return comments.size();
 	}
 }
