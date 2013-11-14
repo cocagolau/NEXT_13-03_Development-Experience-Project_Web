@@ -8,9 +8,6 @@ header {position:fixed; background-color:#77C9FF; width:100%; height:53px; visib
 .alignParent {position:relative; }
 .alignBottom {position:absolute; bottom:-100%; margin:0px;}
 
-/* test */
-.test { border:1px solid #3f6caf; }
-
 
 /* container */
 #container {width:980px; min-width:980px; margin:0px auto; padding-top:60px; border:0px solid #3f6caf;}

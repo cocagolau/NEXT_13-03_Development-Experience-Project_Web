@@ -19,7 +19,7 @@ public class SignController {
 	
 	@RequestMapping("/up")
 	public String signUp () {
-		return "signUp";
+		return "signUpForm";
 	}
 	@RequestMapping("/out")
 	public String signOut(HttpSession session) {

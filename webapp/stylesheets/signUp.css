@@ -6,6 +6,11 @@
 	margin-left:-250px; padding:30px;
 	border-radius:15px;
 	background-color:rgba(255,255,255,0.9);
+	border-top:1px solid #fff;
+	border-left:1px solid #fff;
+	border-right:1px solid #313131;
+	border-bottom:1px solid #313131;
+	
 }
 #signUp a {
 	text-decoration:none;
@@ -34,6 +39,12 @@
 	padding:8px 13px;
 	width:320px;
 	margin-bottom:10px;
+	outline:none;
+}
+
+#signUp > .form button {
+	active:none;
+	outline:none;
 }
 
 #signUp > .form .facebook {
@@ -41,8 +52,9 @@
 	width:330px; height:50px;
 	margin-left:10px; margin-top:10px;
 	text-align:center;
-	padding-top:24px;
+	padding-top:30px;
 	border-radius:10px;
 	background-color:#2A4588;
-	font-size:2.2em;
+	font-size:2em;
+	color:#E6E6E6;
 }

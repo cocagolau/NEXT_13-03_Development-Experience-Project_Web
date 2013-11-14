@@ -1,13 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <div id="statusBar">
-	<div class="alignParent">
-		<h1 id="logo" class="alignBottom">Wiggle.so</h1>
-		<div id="status" class="alignBottom">
-			<div class="alignParent">
-				<div id="statusDate" class="alignBottom">2013.10.10 <span>(목)</span></div>
-				<%@ include file = "userStatus.jsp" %>
-			</div>
-		</div>
+	<h1 id="logo">Wiggle.so</h1>
+	<div id="status">
+		<div id="date">2013.10.10 <span>(목)</span></div>
+		<c:if test= "${not empty sessionScope.userEmail}">
+			<div><a href="board/form" target="_blank">글쓰기</a></div>
+		</c:if>
+	</div>
+	<div id="userStatus">
+		<%@ include file = "userStatus.jsp" %>
 	</div>
 </div>

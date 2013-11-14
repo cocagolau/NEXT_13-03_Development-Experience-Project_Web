@@ -5,6 +5,8 @@ import java.util.Iterator;
 import org.nhnnext.repository.BoardRepository;
 import org.nhnnext.repository.SignBoardRepository;
 import org.nhnnext.support.FileUploader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,6 +18,9 @@ import org.springframework.web.multipart.MultipartFile;
 @Controller
 @RequestMapping("/board")
 public class PhotoBoardController {
+	
+	private static final Logger log = LoggerFactory
+			.getLogger(PhotoBoardController.class);
 	
 	@Autowired
 	BoardRepository boardRepository;
@@ -57,6 +62,7 @@ public class PhotoBoardController {
 		photoBoard = addSignBoard(photoBoard, sign);
 		photoBoard.setFilename(FileUploader.upload(photo));
 		boardRepository.save(photoBoard);
+		log.debug("((((((((((((((((board : {}", photoBoard);
 		
 		return "redirect:/";
 	}

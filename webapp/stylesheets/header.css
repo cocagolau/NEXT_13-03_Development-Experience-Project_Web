@@ -1,13 +1,75 @@
 @CHARSET "UTF-8";
 
 /* statusBar */
-#statusBar {color:#EFFEFE; width:980px; min-width:980px; margin:0px auto; padding-top:2px; border:0px solid #3F6CAF;}
-	/* statusInfo: logo, journalLogo, paperInfo */
-	#statusBar>div {height:48px; margin-top:-53px;}
-	#logo {left:0px; font-size:2.5em; font-style:bold; border:1px solid #3F6CAF;}
-	#status {left:230px; height:40px; width:750px;}
-		#status>div {height:100%; width:100%; margin-top:-40px;}
-		#statusDate {left:0px; font-size:1.8em; font-style:thin;}
-		#statusDate>span {font-size:0.9em}
-		#statusInfo {left:200px;  font-size:1.5em; font-style:thin; border:1px solid #3F6CAF;}
-		#statusUser {right:0px; font-size:2em; border:1px solid #3F6CAF;}
+#statusBar {
+	width:980px; min-width:980px; margin:0px auto;
+	color:#EFFEFE;
+}
+#statusBar a {
+	color:#EFFEFE; text-decoration:none;
+}
+
+#logo {
+	font-size:2.5em;
+	float:left;
+	margin-top:12px;
+}
+#status {
+	position:relative; left:90px;
+	margin-top:20px; display:inline-block;
+	font-size:1.6em;
+}
+
+
+/* about user  */
+
+#userStatus {
+	float:right;
+	margin-top:16px;
+}
+
+#userStatus > div {
+	float:right;
+}
+#userStatus > .text {
+	margin-top:3px; margin-left:10px; margin-right:20px;
+	font-size:1.6em;
+}
+
+#userStatus > .signUpFormBtn {
+	margin-top:-4px;
+	font-size:2.4em;
+}
+
+
+#userStatus > .signInForm input {
+	margin:0px; padding:2px 5px;
+	font-size:1.2em;
+	outline:none;
+}
+
+#userStatus > .signInBtn {
+	margin-top:-1px;
+	margin-left:15px;
+	font-size:2.4em;
+}
+#userStatus > .signInBtn a {
+	color:#92f23c;
+}
+#userStatus > .signInBtn a:hover {
+	color:#14d100;
+}
+
+
+/* after sign in */
+#userStatus > .signOutBtn {
+	font-size:1.6em;
+	margin-top:3px;
+	margin-right:2px;
+}
+
+#userStatus > .quote {
+	font-size:1.6em;
+	margin-top:2px;
+	letter-spacing:1px;
+}

@@ -6,6 +6,9 @@
 	<meta charset="utf-8">
 	<title>Insert title here</title>
 	<link rel="stylesheet" type="text/css" href="../stylesheets/cssResetStyle.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/utils.css">
+	
+	
 	<link rel="stylesheet" type="text/css" href="../stylesheets/main.css">
 	<link rel="stylesheet" type="text/css" href="../stylesheets/header.css">
 	
@@ -13,14 +16,11 @@
 	<link rel="stylesheet" type="text/css" href="../stylesheets/show.css">
 	<link rel="stylesheet" type="text/css" href="../stylesheets/comments.css">
 	
-	<link rel="stylesheet" type="text/css" href="../stylesheets/signIn.css">
 	<link rel="stylesheet" type="text/css" href="../stylesheets/signUp.css">
-	<link rel="stylesheet" type="text/css" href="../stylesheets/userInfo.css">
-	<link rel="stylesheet" type="text/css" href="../stylesheets/login.css">
 	
 	<script type="text/javascript" src="../javascripts/utils.js"></script>
 	<script type="text/javascript" src="../javascripts/main.js"></script>
-	<script type="text/javascript" src="../javascripts/signup.js"></script>
+	<script type="text/javascript" src="../javascripts/sign.js"></script>
 </head>
 <body>
 
