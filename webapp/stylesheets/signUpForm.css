@@ -1,0 +1,97 @@
+@CHARSET "UTF-8";
+
+#signUp {
+	position:absolute; top:40px; left:50%;
+	width:500px; height:400px;
+	margin-left:-250px; padding:30px;
+	border-radius:15px;
+	background-color:rgba(255,255,255,0.9);
+	border-top:1px solid #fff;
+	border-left:1px solid #fff;
+	border-right:1px solid #313131;
+	border-bottom:1px solid #313131;
+	
+}
+#signUp .closeBtn {
+	position:absolute;
+	right:20px; top:20px;
+}
+
+#signUp > h1 {
+	font-size:3em; color:#3f6caf;
+	text-align:center;
+	margin-bottom:20px;
+}
+
+#signUp > .form {
+	position:absolute;
+	width:350px; height:300px;
+	left:50%; margin-left:-175px;
+}
+
+#signUp > .form input {
+	background-position:305px;
+	font-size:1.8em;
+	padding:8px 13px;
+	width:320px;
+	margin-bottom:10px;
+	outline:none;
+}
+
+#signUp > .form button{
+	outline:none; 
+	border:none;
+}
+
+#signUp > .form .signUpBtn {
+	float:right;
+	background-color:rgba(255,255,255,0);
+	margin-right:11px;
+	color:#3f6caf;
+	margin-top:6px;
+}
+
+#signUp > .form .facebook {
+	width:330px; height:60px;
+	margin-left:10px; margin-top:25px;
+	border-radius:10px;
+	padding-top:2px;
+	
+	background-color:#2A4588;
+	font-size:1.8em;
+	color:#E6E6E6;
+}
+
+#signUp > .form .correct {
+	/* border:2px solid #259500; */
+	border:2px solid #8DD65F;
+}
+
+#signUp > .form .incorrect {
+	border:2px solid #EE3D3D;
+	/* #D62A32 #EE3D3D #F11D1E */
+}
+
+#signUp > .form .fixed {
+	float:left;
+	width:260px;
+	disabled:true;
+}
+
+
+#signUp > .form .facebook > div:nth-of-type(1) {
+	position:relative; left:12px;
+	float:left;
+	width: 56px; height:56px;
+}
+#signUp > .form .facebook > div:nth-of-type(2) {
+	position:relative;
+	top:15px; left:px;
+}
+
+#signUp > .verifyForm {
+	position:absolute;
+	width:50px; height:300px;
+	right:50%; margin-right:-175px;
+	
+}

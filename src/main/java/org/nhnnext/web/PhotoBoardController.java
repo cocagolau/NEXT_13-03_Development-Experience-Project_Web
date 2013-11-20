@@ -27,9 +27,10 @@ public class PhotoBoardController {
 	@Autowired
 	SignBoardRepository signBoardRepository;
 	
-	@RequestMapping("/form")
+//	@RequestMapping("/form")
+	@RequestMapping("/writing")
 	public String form() {
-		return "createForm";
+		return "writingForm";
 	}
 	
 	@RequestMapping("delete/{id}")
@@ -62,7 +63,7 @@ public class PhotoBoardController {
 		photoBoard = addSignBoard(photoBoard, sign);
 		photoBoard.setFilename(FileUploader.upload(photo));
 		boardRepository.save(photoBoard);
-		log.debug("((((((((((((((((board : {}", photoBoard);
+//		log.debug("((((((((((((((((board : {}", photoBoard);
 		
 		return "redirect:/";
 	}

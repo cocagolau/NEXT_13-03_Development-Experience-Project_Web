@@ -3,7 +3,7 @@
 
 <c:choose>
 	<c:when test= "${not empty sessionScope.userEmail}">
-		<div class="signOutBtn"><a href="#">&#88;</a></div>
+		<div class="signOutBtn"><a href="#" class="closeBtn">&#88;</a></div>
 		<div class="text"><a href="#">${sessionScope.userName}</a></div>
 		<div class="quote"><a href=#>"10"</a></div>
 		
@@ -13,7 +13,7 @@
 		<div class="text title out">회원가입</div>
 		<div class="signUpFormBtn"><a href="#">+</a></div>
 		<div class="text signInFormBtn"><a href="#">로그인</a></div>
-		<div class="signInBtn out"><a href="#">&#10132;</a></div>
+		<div class="signInBtn out"><a href="#" class="arrowBtn">&#10132;</a></div>
 		<div class="signInForm out">
 			<form id="signInForm" action="sign/in" method="post">
 				<span><input name="signInEmail" size="25" type="text" placeholder="이메일" autofocus /></span>

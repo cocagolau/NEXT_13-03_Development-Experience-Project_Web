@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta charset="utf-8">
-	<title>Insert title here</title>
+	<title>We Wiggle so...</title>
 	<link rel="stylesheet" type="text/css" href="../stylesheets/cssResetStyle.css">
 	<link rel="stylesheet" type="text/css" href="../stylesheets/utils.css">
 	
@@ -15,12 +15,15 @@
 	<link rel="stylesheet" type="text/css" href="../stylesheets/boardList.css">
 	<link rel="stylesheet" type="text/css" href="../stylesheets/show.css">
 	<link rel="stylesheet" type="text/css" href="../stylesheets/comments.css">
-	
-	<link rel="stylesheet" type="text/css" href="../stylesheets/signUp.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/signUpForm.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/writingForm.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/article.css">
 	
 	<script type="text/javascript" src="../javascripts/utils.js"></script>
+	<script type="text/javascript" src="../javascripts/events.js"></script>
 	<script type="text/javascript" src="../javascripts/main.js"></script>
 	<script type="text/javascript" src="../javascripts/sign.js"></script>
+	<script type="text/javascript" src="../javascripts/boardWriting.js"></script>
 </head>
 <body>
 
@@ -33,7 +36,7 @@
 					<div class="journalRow">
 						<div id="leftColumn" class="journalColumn">
 							<!-- journal_left_column / 470px  -->
-							<%@ include file="boardList.jsp" %>
+							<%@ include file="articleList.jsp" %>
 						</div>
 						<div id="rightColumn" class="journalColumn">
 							<!-- journal_right_column / 470px  -->

@@ -5,9 +5,9 @@
 	width:980px; min-width:980px; margin:0px auto;
 	color:#EFFEFE;
 }
-#statusBar a {
+/* #statusBar a {
 	color:#EFFEFE; text-decoration:none;
-}
+} */
 
 #logo {
 	font-size:2.5em;
@@ -19,6 +19,17 @@
 	margin-top:20px; display:inline-block;
 	font-size:1.6em;
 }
+#date {
+	display:inline-block;
+}
+#action {
+	display:inline-block;
+	margin-left:70px;
+}
+#action a {
+	text-decoration:none;
+	color:#EFFEFE;
+}
 
 
 /* about user  */
@@ -27,7 +38,10 @@
 	float:right;
 	margin-top:16px;
 }
-
+#userStatus a {
+	text-decoration:none;
+	color:#EFFEFE;
+}
 #userStatus > div {
 	float:right;
 }
@@ -36,10 +50,17 @@
 	font-size:1.6em;
 }
 
+#userStatus > .signInFormBtn > a {
+	color:#EFFEFE; text-decoration:none;
+}
+#userStatus > .signUpFormBtn > a {
+	color:#EFFEFE; text-decoration:none;
+}
 #userStatus > .signUpFormBtn {
 	margin-top:-4px;
 	font-size:2.4em;
 }
+
 
 
 #userStatus > .signInForm input {
@@ -51,21 +72,16 @@
 #userStatus > .signInBtn {
 	margin-top:-1px;
 	margin-left:15px;
-	font-size:2.4em;
-}
-#userStatus > .signInBtn a {
-	color:#92f23c;
-}
-#userStatus > .signInBtn a:hover {
-	color:#14d100;
 }
 
 
 /* after sign in */
-#userStatus > .signOutBtn {
-	font-size:1.6em;
-	margin-top:3px;
+#userStatus > .signOutBtn{
+	margin-top:1px;
 	margin-right:2px;
+}
+#userStatus > .signOutBtn a:hover {
+	color:#EE3D3D;
 }
 
 #userStatus > .quote {
