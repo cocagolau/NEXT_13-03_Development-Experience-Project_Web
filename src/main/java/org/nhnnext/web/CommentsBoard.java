@@ -19,11 +19,9 @@ public class CommentsBoard {
 	@Column (length=1000, nullable=false)
 	private String contents;
 	
-	@JsonIgnore
 	@ManyToOne
 	private PhotoBoard photoBoard;
 	
-	@JsonIgnore
 	@ManyToOne
 	private SignBoard signBoard;
 	

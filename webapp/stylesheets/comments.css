@@ -1,8 +1,0 @@
-@CHARSET "UTF-8";
-
-#commentContents>input {width:350px;}
-#commentSubmit>input {width:40px;}
-div[id^="comment"] {clear:both;}
-.commentWriterProfile {float:left; width:50px;}
-.commentWriterContents {float:left;}
-.commentWriterOption {float:right;}

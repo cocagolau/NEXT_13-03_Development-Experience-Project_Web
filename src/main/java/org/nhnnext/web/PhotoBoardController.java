@@ -3,6 +3,7 @@ package org.nhnnext.web;
 import java.util.Iterator;
 
 import org.nhnnext.repository.BoardRepository;
+import org.nhnnext.repository.CommentsRepository;
 import org.nhnnext.repository.SignBoardRepository;
 import org.nhnnext.support.FileUploader;
 import org.slf4j.Logger;
@@ -26,8 +27,9 @@ public class PhotoBoardController {
 	BoardRepository boardRepository;
 	@Autowired
 	SignBoardRepository signBoardRepository;
+	@Autowired
+	CommentsRepository commentsRepository;
 	
-//	@RequestMapping("/form")
 	@RequestMapping("/writing")
 	public String form() {
 		return "writingForm";
@@ -35,6 +37,14 @@ public class PhotoBoardController {
 	
 	@RequestMapping("delete/{id}")
 	public String delete(@PathVariable Long id) {
+		Iterator<CommentsBoard> ir = commentsRepository.findAll().iterator();
+		CommentsBoard currCommentsBoard = null;
+		while (ir.hasNext()) {
+			currCommentsBoard = ir.next();
+			if (currCommentsBoard.getPhotoBoard().getId() == id) {
+				commentsRepository.delete(currCommentsBoard);
+			}
+		}
 		boardRepository.delete(id);
 		return "redirect:/";
 	}

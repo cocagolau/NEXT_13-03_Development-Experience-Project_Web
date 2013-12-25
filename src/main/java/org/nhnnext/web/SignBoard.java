@@ -8,7 +8,6 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 import org.codehaus.jackson.annotate.JsonIgnore;
-import org.junit.Ignore;
 
 @Entity
 public class SignBoard {
@@ -16,15 +15,18 @@ public class SignBoard {
 	@Id
 	private String email;
 	
+	@JsonIgnore
 	@Column(length=12, nullable=false)
 	private String password;
 	
 	@Column(length=8, nullable=false)
 	private String name;
 	
+	@JsonIgnore
 	@OneToMany(mappedBy="signBoard")
 	private List<PhotoBoard> photoBoards;
 	
+	@JsonIgnore
 	@OneToMany(mappedBy="signBoard")
 	private List<CommentsBoard> commentsBoards;
 	

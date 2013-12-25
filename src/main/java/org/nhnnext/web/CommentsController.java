@@ -43,9 +43,6 @@ public class CommentsController {
 		CommentsBoard commentsBoard = addSignBoard(new CommentsBoard (photoBoard, contents), sign);
 		
 		return commentsRepository.save(commentsBoard);
-		
-//		CommentsBoard crr = commentsRepository.save(commentsBoard);
-//		return crr;
 	}
 	
 	

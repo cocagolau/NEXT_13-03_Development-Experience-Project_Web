@@ -14,7 +14,6 @@
 	
 	<link rel="stylesheet" type="text/css" href="../stylesheets/boardList.css">
 	<link rel="stylesheet" type="text/css" href="../stylesheets/show.css">
-	<link rel="stylesheet" type="text/css" href="../stylesheets/comments.css">
 	<link rel="stylesheet" type="text/css" href="../stylesheets/signUpForm.css">
 	<link rel="stylesheet" type="text/css" href="../stylesheets/writingForm.css">
 	<link rel="stylesheet" type="text/css" href="../stylesheets/article.css">
@@ -24,6 +23,7 @@
 	<script type="text/javascript" src="../javascripts/main.js"></script>
 	<script type="text/javascript" src="../javascripts/sign.js"></script>
 	<script type="text/javascript" src="../javascripts/boardWriting.js"></script>
+	<script type="text/javascript" src="../javascripts/comment.js"></script>
 </head>
 <body>
 

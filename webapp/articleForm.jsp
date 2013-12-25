@@ -16,8 +16,7 @@
 				
 			<div class="option">
 				<ul>
-					<c:if
-						test="${photoBoard.signBoard.email == sessionScope.userEmail}">
+					<c:if test="${photoBoard.signBoard.email == sessionScope.userEmail}">
 						<li class="optionItem"><a
 							href="board/modify/<c:out value="${photoBoard.id}" />">수정</a></li>
 						<li class="optionItem"><a
@@ -40,8 +39,8 @@
 		</div>
 		
 		<div class="status">
-			<div>comment ${photoBoard.size}</div>
-			<div>quoted 7</div>
+			<div>댓글 ${photoBoard.size}</div>
+			<div>인용 0</div>
 		</div>
 		
 		<div class="comments">
