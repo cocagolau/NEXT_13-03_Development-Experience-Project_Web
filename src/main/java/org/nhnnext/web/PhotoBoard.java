@@ -20,19 +20,15 @@ public class PhotoBoard {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	
-	@JsonIgnore
 	@Column(length=127, nullable=true)
 	private String filename;
 	
-	@JsonIgnore
 	@Column(length=1023, nullable=false)
 	private String article;
 
-	@JsonIgnore
 	@OneToMany (mappedBy="photoBoard", fetch=FetchType.EAGER)
 	private List<CommentsBoard> comments;
 	
-	@JsonIgnore
 	@ManyToOne
 	private SignBoard signBoard;
 	

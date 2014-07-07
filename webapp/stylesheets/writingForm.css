@@ -1,0 +1,74 @@
+@CHARSET "UTF-8";
+
+#writing {
+	position:absolute; top:40px; left:50%;
+	width:500px; height:400px;
+	margin-left:-250px; padding:30px;
+	border-radius:15px;
+	background-color:rgba(255,255,255,0.9);
+	border-top:1px solid #fff;
+	border-left:1px solid #fff;
+	border-right:1px solid #313131;
+	border-bottom:1px solid #313131;
+	
+}
+#writing > h1 {
+	font-size:3em; color:#3f6caf;
+	text-align:center;
+	margin-bottom:20px;
+}
+#writing .closeBtn {
+	position:absolute;
+	right:20px; top:20px;
+}
+#writing > .form {
+	width:490px;
+	height:150px;
+}
+
+
+#writing > .form > .uploadBtn {
+	float:left;
+	display:inline-block;
+}
+#writing > .form > .writingBtn {
+	float:right;
+	display:inline-block;
+}
+
+#writing > .form > .article {
+	clear:both;
+	width:490px; height:100px;
+	background-color:rgba(255,255,255,0.8);
+	border:2px dotted #77C9FF;
+	border-radius:7px;
+	position:relative;
+	top:5px;
+	padding:4px 8px;
+}
+
+#writing > .form input {
+	font-size:1.2em;
+}
+#writing > .form textarea {
+	width:490px;
+	background:none; resize:none; outline:none; border:none;
+	font-size:1.3em;
+	wrap:hard;
+	margin:5px 0px;
+	/* overflow:hidden; text-overflow:auto; */
+	color:#313131;
+	padding:0px;
+	
+}
+
+
+
+
+
+
+
+
+
+
+

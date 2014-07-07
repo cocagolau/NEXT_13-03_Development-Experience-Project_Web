@@ -1,0 +1,44 @@
+@CHARSET "UTF-8";
+
+/* test */
+.test { border:1px solid #3f6caf; }
+
+/* out */
+.out {
+	position:absolute;
+	left:-1000px;
+	top:-1000px;
+}
+
+.arrowBtn {
+	text-decoration:none;
+	font-size:2.4em;
+	color:#EFFEFE;
+}
+.arrowBtn:hover {
+	color:#8DD65F;
+}
+
+.loading {
+	background-image:url(../images/data/loading.gif);
+	background-repeat:no-repeat;
+}
+.loading {
+	background-image:url(../images/data/loading2.gif);
+	background-repeat:no-repeat;
+}
+
+.facebookLogo {
+	background-image:url(../images/data/facebook56.png);
+	background-repeat:no-repeat;
+}
+
+.closeBtn {
+	text-decoration:none;
+	font-size:2em;
+	color:#A7A7A7;
+}
+.closeBtn:hover {
+	color:#EE3D3D;
+	/* #F11D1E; */
+}

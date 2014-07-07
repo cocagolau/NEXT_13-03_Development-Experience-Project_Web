@@ -1,0 +1,88 @@
+@CHARSET "UTF-8";
+
+#articleList {
+	
+}
+
+#articleList > .article {
+	clear:both;
+	color:#313131;
+}
+
+#articleList > .article > .left {
+	float:left;
+}
+
+#articleList > .article > .right {
+	width:400px;
+	float:right;
+}
+
+#articleList .right > .info {
+	font-size:1.1em;
+	margin-bottom:15px;
+}
+
+#articleList .right > .info a{
+	text-decoration:none;
+	color:#313131;
+}
+
+
+#articleList .right > .contents {
+	margin-bottom:15px;
+}
+
+#articleList .right > .contents > .photo {
+	margin-bottom:5px;
+}
+#articleList .right > .contents > .text {
+	color:#313131;
+	font-size:1.1em;
+	margin-bottom:5px;
+}
+
+#articleList .right > .status {
+	maring-bottom:15px;
+}
+
+#articleList .right > .status > div {
+	display:inline-block;
+} 
+
+#articleList .right input {
+	outline:none;
+}
+
+#articleList .right > .comments .comment {
+	clear:both;
+	margin-bottom:1px;
+}
+
+#articleList .right > .comments .comment a {
+	text-decoration:none;
+	color:#313131;
+}
+
+#articleList .right > .comments .comment > .info {
+	float:left;
+	margin-right:5px;
+}
+#articleList .right > .comments .comment > .option {
+	float:right;
+	margin-left:5px;
+}
+#articleList .right > .comments .comment > .contents {
+	display:inline-block;
+}
+
+#articleList .right > .comments .writing .contents > input {
+	width:350px;
+}
+
+
+
+
+
+
+

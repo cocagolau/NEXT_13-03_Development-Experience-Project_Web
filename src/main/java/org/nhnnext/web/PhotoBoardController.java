@@ -92,44 +92,4 @@ public class PhotoBoardController {
 		return photoBoard;
 	}
 	
-//	@RequestMapping(value="", method=RequestMethod.POST)
-//	public String upload(PhotoBoard photoBoard, MultipartFile photo) {		
-//		Long currentId = photoBoard.getId();
-//		String currentFilename = FileUploader.upload(photo);
-//		
-//		if (currentId != null && currentFilename == null) {
-//			String newFilename = boardRepository.findOne(currentId).getFilename();
-//			currentFilename = newFilename;
-//		}
-//		
-//		String sign = photoBoard.getSign();
-//		Iterator<SignBoard> signIr = signBoardRepository.findAll().iterator();
-//		SignBoard tempSignBoard;
-//		while (signIr.hasNext()) {
-//			tempSignBoard = signIr.next();
-//			if (tempSignBoard.getEmail().equals(sign)) {
-//				photoBoard.setSignBoard(tempSignBoard);
-//				break;
-//			}
-//		}
-//		
-//		
-//		photoBoard.setFilename(currentFilename);
-//		boardRepository.save(photoBoard);
-//		
-//		return "redirect:/board";
-//	}
-//	
-//	@RequestMapping("/{id}")
-//	public String show (@PathVariable Long id, Model model) {
-//		PhotoBoard photoBoard = boardRepository.findOne(id);
-//		model.addAttribute(photoBoard);
-//		return "show";
-//	}
-//	
-//	@RequestMapping("")
-//	public String list(Model model) {
-//		model.addAttribute("photoBoards", boardRepository.findAll());
-//		return "boardList";
-//	}
 }
